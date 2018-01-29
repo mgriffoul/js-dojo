@@ -1,0 +1,21 @@
+{
+  "name": "javascript-dojo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/karma start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine-core": "2.9.1",
+    "jasmine-pretty-html-reporter": "0.2.5",
+    "jasmine2-custom-message": "0.8.4",
+    "karma": "2.0.0",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-html-live-reporter": "0.2.0",
+    "karma-html-reporter": "0.2.7",
+    "karma-jasmine": "1.1.1"
+  }
+}
