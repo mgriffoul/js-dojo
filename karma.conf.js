@@ -3,8 +3,9 @@ module.exports = function(config) {
     reporters: ['progress', 'html', 'live-html'],
 	
 	basePath: '',
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine-jquery', 'jasmine'],
     files: [
+    	'fixtures/**/*.html',
 	  'node_modules/jasmine2-custom-message/jasmine2-custom-message.js',
       'src/**/*.js',
       'spec/**/*.js'
