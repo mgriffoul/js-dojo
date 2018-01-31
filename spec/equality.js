@@ -21,7 +21,6 @@ describe("2 - Equality", function () {
 		expect("Toto" == KO).toBeTruthy();
 		expect(1 === KO).toBeTruthy();
 		expect(1 === KO).toBeFalsy();
-		expect(0 === KO).toBeTruthy();
 	});
 
 	it("True or False", function () {
@@ -54,7 +53,7 @@ describe("2 - Equality", function () {
 		expect(emptyVar) // .toBeFalsy() .toBeTruthy()
 
 		var zeroVar = 0;
-		expect(emptyVar) // .toBeFalsy() .toBeTruthy()
+		expect(zeroVar) // .toBeFalsy() .toBeTruthy()
 
 
 		expect("toto" == true) // .toBeFalsy() .toBeTruthy()
@@ -101,9 +100,13 @@ describe("2 - Equality", function () {
 	});
 
 	it("Evaluation Order - throw", function () {
+		function throwError() {
+			throw 'OMG UNE ERREUR !';
+		}
+
 		//Supprimer un fail pour faire passer le test
 		try {
-			'yes' || throwError();
+			'yes' && throwError();
 			fail('Fail');
 		} catch (e) {
 			fail('Fail');
