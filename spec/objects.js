@@ -28,4 +28,16 @@ describe("6 - Object & Arrays", function () {
 		since('KO7').expect(a['length']).toBe();
 		since('KO8').expect(a[10]).toBe();
 	});
+
+	it("Sub Objects", function () {
+		var o = {
+			a: 'ok',
+			sub: {
+				bottom: 0,
+				f: function() { return 'yes'; }
+			}
+		};
+		since('KO').expect(a.sub.bottom).toBe();
+		since('KO2').expect(a['sub']['f']()).toBe();
+	});
 });
