@@ -1,55 +1,61 @@
-describe("Js Types", function() {
-  it("String", function() {
-	var string = "bob";
-	  
-    expect(typeof string).toBe('OMG !');
-    expect(typeof string === '').toBeTruthy();
-    expect(typeof "bob" === '').toBeTruthy();
-    expect(typeof 'bob' === '').toBeTruthy();
-  });
-  
-  it("Numbers", function() {
-	var number = 111;
-	var floatNumber = 1.2;
-	
-	  
-    expect(typeof number === '').toBeTruthy();
-    expect(typeof floatNumber === '').toBeTruthy();
-  });  
-  
-  it("Arrays", function() {
-	var array = [];
-	var array2 =  new Array();
-    expect(typeof array === '').toBeTruthy();
-    expect(typeof array2 === '').toBeTruthy();
-  });  
-  
-  it("Objects", function() {
-	var object = {};
-	var object2 = new Object();
-	var nada;
-    expect(typeof array === '').toBeTruthy();
-    expect(typeof object === '').toBeTruthy();
-    expect(typeof nada === '').toBeTruthy();
-  });
-  
-  it("Variables", function() {
-	var array = [];
-	var object = {};
-	var nada;
-    expect(typeof array === '').toBeTruthy();
-    expect(typeof object === '').toBeTruthy();
-    expect(typeof nada === '').toBeTruthy();
-  });
-  
-  it("Mutations", function() {
-	var myvar;
-	expect(typeof myvar === '').toBeTruthy();
-	
-	myvar = "toto";
-	expect(typeof myvar === '').toBeTruthy();
+describe("1 - Js Types", function () {
+	it("String", function () {
+		var string = "bob";
 
-	myvar = 123
-	expect(typeof myvar === '').toBeTruthy();
-  });
+		since('KO').expect(typeof string).toBe();
+		since('KO').expect(typeof "bob").toBe();
+		since('KO').expect(typeof 'bob').toBe();
+	});
+
+	it("True of False", function () {
+		since('KO').expect(typeof true).toBe('');
+		since('KO').expect(typeof false).toBe('');
+	});
+
+	it("Numbers", function () {
+		var number = 111;
+		var floatNumber = 1.2;
+
+
+		since('KO').expect(typeof number).toBe();
+		since('KO').expect(typeof floatNumber).toBe();
+	});
+
+	it("Arrays", function () {
+		var array = [];
+		var array2 = new Array();
+		since('KO').expect(typeof array).toBe();
+		since('KO').expect(typeof array2).toBe();
+	});
+
+	it("Objects", function () {
+		since('KO').expect(typeof {}).toBe();
+		since('KO').expect(typeof new Object()).toBe();
+	});
+
+	it("Variables", function () {
+		var array = [];
+		var object = {};
+		var nada;
+		since('KO').expect(typeof array ).toBe();
+		since('KO').expect(typeof object).toBe();
+		since('KO').expect(typeof nada).toBe();
+	});
+
+	it("Mutations", function () {
+		var myvar;
+		since('KO').expect(typeof myvar).toBe();
+
+		myvar = "toto";
+		since('KO').expect(typeof myvar).toBe();
+
+		myvar = 123;
+		since('KO').expect(typeof myvar).toBe();
+	});
+
+	it("Null and undefined", function () {
+		since('KO').expect(typeof null).toBe();
+
+		since('KO').expect(typeof undefined).toBe();
+	});
 });
