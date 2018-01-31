@@ -37,7 +37,7 @@ describe("6 - Object & Arrays", function () {
 				f: function() { return 'yes'; }
 			}
 		};
-		since('KO').expect(a.sub.bottom).toBe();
-		since('KO2').expect(a['sub']['f']()).toBe();
+		since('KO').expect(o.sub.bottom).toBe();
+		since('KO2').expect(o['sub']['f']()).toBe();
 	});
 });
